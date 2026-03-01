@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Desing Ireland for Small Businesses | Dublin Experts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+ /* Сброс базовых стилей */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+/* ===== GENERAL SECTIONS ===== */
+
+section {
+  padding: 35px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: px20;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  background: green;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== FOR WHO ===== */
+
+.for-who {
+  background: #ffffff;
+  line-height: 1.6;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 60px 20px;
+}
+
+/* ===== FEATURES + PRICING LAYOUT ===== */
+
+.features-pricing {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  
+}
+
+.features-pricing section {
+  flex: 1 1 0;
+  max-width: 650px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+ 
+}
+
+/* ===== WHAT YOU GET ===== */
+
+.what-you-get {
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* ===== SIMPLE PRICING ===== */
+
+.simple-pricing {
+  max-height: 520px;     /* фиксированная высота */
+  overflow: hidden;      /* внешний блок не растёт */
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+  overflow-y: auto;      /* скролл внутри */
+  padding-right: 6px;
+}
+
+/* ===== PRICING FOLDER CARDS ===== */
+
+.pricing-card {
+  background: #ff9500;
+  color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* текст сверху, не растягиваем вниз */
+  align-items: center;
+
+  line-height: 1.3; /* плотнее текст */
+  min-height: auto; /* убираем фиксированную высоту */
+  gap: 5px; /* небольшие промежутки между заголовком и ценой */
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pricing-card h3 {
+  margin: 0;
+  font-size: 16px; /* заголовок поменьше */
+}
+
+.pricing-card p {
+  margin: 0;
+  font-size: 18px; /* цена чуть меньше */
+  font-weight: bold;
+}
+
+/* ===== CHAT SECTION ===== */
+
+.chat-section {
+  background: #fafafa;
+}
+
+.chat-box {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 14px;
+}
+
+#chat {
+  min-height: 60px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #FF9500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* ===== PORTFOLIO ===== */
+
+.portfolio {
+  background: #ffffff;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.portfolio-item {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.portfolio-item a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #FF9500;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .features-pricing {
+    flex-direction: column;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 40px 15px;
+}
+.pricing-grid: {
+   grid-template-columns: 1fr;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Web Desing Services in Ireland</h1>
+  <h2>I install everything. You just use it.</h2>
+  <p>
+    Ready-made business website installed for you.
+    No agencies. No monthly fees. No subscriptions.
+  </p>
+</section>
+
+<!-- FOR WHO -->
+<section class="for-who">
+  <h2>Start Your Business Today</h2>
+  <p>
+    This product is made for people who want to start a small business
+    but don’t know where to begin.<br/>
+    <b>Every business starts with a website</b>
+  </p>
+  <p>
+    You don’t need technical skills.
+    You don’t need an IT agency.
+  </p>
+  
+</section>
+
+<!-- WHAT YOU GET -->
+<div class="features-pricing">
+  <section class="what-you-get">
+    <h2>What You Get</h2>
+    <ul>
+      <li>✔<b> Your ready-to-launch website for food & beverage businesses</b></li>
+      <li>✔ Manage and edit your menu directly on your website via the admin link</li>
+      <li>✔ Receive orders and reviews directly in your  Telegram  </li>
+      <li>✔<b> Elegant digital business card with flip effect</b></li>
+      <li>✔ Works on iOS and Android</li>
+      <li>✔ Easy sharing and optional QR code</li>
+    </ul>
+  </section>
+
+  <section class="simple-pricing">
+    <h2>Simple Pricing</h2>
+    <div class="pricing-grid" id="pricingContainer"></div>
+  </section>
+        
+</div>
+   
+<!-- QUESTIONNAIRE -->
+<section class="chat-section">
+  <h2>Answer a few questions and I will install your website</h2>
+
+  <div class="chat-box">
+    <div id="chat"></div>
+
+    <input id="userInput" type="text" placeholder="Enter your answer…">
+    <button id="nextBtn">Next</button>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <h2>Portfolio</h2>
+  <div class="portfolio-grid" id="portfolioContainer"></div>
+ </section>
+    
+
+<footer>
+  Contact:
+<a href="mailto:andrew.cardvault@gmail.com" style="color:#FF9500;"> 
+andrew.cardvault@gmail.com
+</a>
+<br/>
+  Communication via messages only.
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+const questions = [
+  "What's your name (How should I address you?)",
+  "What type of website do you need? (Cafe/Pizzeria/Burger/Business Card/Other) ",
+  "What's your email? I work online and deliver digitally",
+  "Ready to reserve your spot with just a 30% deposit"
+];
+
+let step = 0;
+let answers = [];
+
+const chat = document.getElementById("chat");
+const input = document.getElementById("userInput");
+const nextBtn = document.getElementById("nextBtn");
+
+function showQuestion() {
+  chat.innerHTML += "<div><strong>" + questions[step] + "</strong></div>";
+}
+
+async function nextStep() {
+  const answer = input.value.trim();
+  if (!answer) {
+    alert("Please enter your response.");
+    return;
+  }
+
+  answers.push(answer);
+  input.value = "";
+
+  if (step < questions.length - 1) {
+    step++;
+    showQuestion();
+  } else {
+    chat.innerHTML += "<div>Thank you! I will contact you shortly. My email is:andrew.cardvault@gmail.com 👍</div>";
+    input.style.display = "none";
+    nextBtn.style.display = "none";
+    await sendToWorker();
+  }
+}
+
+async function sendToWorker() {
+  const text = answers.join("\n");
+
+  try {
+    await fetch("https://my-worker.andreyodr33.workers.dev", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ text })
+    });
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+nextBtn.addEventListener("click", nextStep);
+showQuestion();
+
+});
+</script>
+<script>
+
+ const pricingPlans = [
+  {
+    title: "Business Card Website",
+    price: "€100",
+    description: "One-time payment"
+  },
+  {
+    title: "Pizza Website",
+    price: "€200",
+    description: "One-time payment"
+  }
+];
+
+// Рендер ценников
+function renderPricing() {
+  const container = document.getElementById("pricingContainer");
+  container.innerHTML = "";
+
+  pricingPlans.forEach(plan => {
+    const card = document.createElement("div");
+    card.className = "pricing-card";
+
+    card.innerHTML = `
+      <h3>${plan.title}</h3>
+      <p class="price">${plan.price}</p>
+      <p>${plan.description}</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+renderPricing();
+</script>
+<script>
+
+const portfolioItems = [
+  {
+    title: "Business Card Website",
+    link: "card.html",
+    text: "Includes payment details"
+  },
+  {
+    title: "Pizza Website",
+    link: "pizza sale.html",
+    text: "Telegram ordering system included"
+  }
+];
+
+// Рендер портфолио
+function renderPortfolio() {
+  const container = document.getElementById("portfolioContainer");
+  container.innerHTML = "";
+
+  portfolioItems.forEach(item => {
+    const block = document.createElement("div");
+    block.className = "portfolio-item";
+
+    block.innerHTML = `
+      <h3>${item.title}</h3>
+      <p>${item.text}</p>
+      <a href="${item.link}" target="_blank">View</a>
+    `;
+
+    container.appendChild(block);
+  });
+}
+
+renderPortfolio();
+
+</script>
+
+</body>
+</html
