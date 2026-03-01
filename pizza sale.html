@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Party</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+   * {
+      box-sizing: border-box;
+  }
+   body {
+       overflow-x: hidden;
+  }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+   .phone-link {
+     font-weight: bold;
+     color: #dc143c;
+  }
+
+   .phone-link:hover {
+    text-decoration: underline;
+  }
+
+    a {
+      color: #8b004b;
+      text-decoration: none;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background:
+        linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+        linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+      background-size: 40px 40px;
+      background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #8b004b;
+      margin: 0;
+    }
+
+    .promo {
+      margin-top: 10px;
+      color: #8b004b;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    /* ===== START ORDER ===== */
+    .order-start {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .start-btn {
+      width: 100%;
+      max-width: 420px;
+      padding: 15px;
+      background: #ff6600;
+      color: #000;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* ===== INFO / REVIEWS / HOURS ===== */
+    .triple {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .facade {
+      width: 100%;
+      max-width: 200px;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    .reviews-box p {
+      margin: 8px 0;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    /* ===== MENU ===== */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 8px;
+      width: 100%;
+      background: #dc143c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #e6e6e6;
+      color: #222;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+#review-modal input,
+#review-modal textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#review-modal textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+ .map-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #4285F4;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.map-btn:hover {
+  opacity: 0.9;
+}
+ 
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .menu {
+        grid-template-columns: repeat(2, 1fr);
+     
+      }
+    }
+
+    @media (max-width: 500px) {
+      .triple {
+         grid-template-columns: 1fr;
+   }
+      .menu {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1 id="company-name">Pizza Party</h1>
+  <p class="promo">🔥 20% OFF on your first order!</p>
+</header>
+
+<main class="container">
+
+  <section class="order-start">
+    <h2>Delivery & Pickup from <span id="company-name"></span></h2>
+
+    <div class="options">
+      <label><input type="checkbox"> 🚴 Delivery</label>
+      <label><input type="checkbox"> 🥡 Takeaway</label>
+      <label><input type="checkbox"> 🍽 Dine-in</label>
+    </div>
+
+    <button class="start-btn">Start My Order</button>
+  </section>
+
+  <section class="triple">
+    <div class="box">
+      <p><strong>Address:</strong> <span id="company-address"></span></p>
+      <p><strong>Phone:</strong><a href="tel:+353000000000" class="phone-link">
+      📞 +353 00 000 0000
+   </a>
+ </p>
+      <p><strong>Owner:</strong> John Doe</p>
+      <img src="IMG_1008.JPG" alt="Pizza Party facade" class="facade">
+    </div>
+
+   
+
+   <div class="box">
+      <h3>Opening Hours</h3>
+      <p>Monday-Friday 11:00–22:00</p>
+      <p>Saturday: 12:00–23:00</p>
+      <p>Sunday: 12:00–22:00</p>
+      <p><strong>Location:</strong><br/><br/>
+      Dublin, Main Street 12<br/><br/>
+      <a href="https://maps.google.com/?q=Dublin+Main+Street+12" 
+       target="_blank" 
+       class="map-btn">
+      📍 Open in Google Maps
+  </a>
+</p> 
+    </div>
+
+    <div class="box">
+      <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div id="reviews-list"></div>
+        <button class="reviev-btn" onclick="openReviewForm()">➕ Add Review</button>
+      </section>
+    </div>
+  </section>
+
+ </div>
+</section>
+
+<div id="review-modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Leave a Review</h3>
+    <input id="name" placeholder="Your name">
+    <textarea id="text" placeholder="Your review"></textarea>
+    <button onclick="saveReview()">Submit</button>
+    <button onclick="closeReviewForm()">Close</button>
+  </div>
+</div>
+  <section class="about">
+  <p><strong>Our Specialties:</strong></p>
+  <p>
+    Margherita (tomato sauce, mozzarella, fresh basil)
+    Pepperoni (tomato sauce, mozzarella, spicy pepperoni)
+    Four Cheese (mozzarella, parmesan, emmental, gorgonzola)
+    Veggie (bell pepper, mushrooms, spinach, tomatoes, olives, onion)
+    Calzone (mozzarella, tomato sauce, minced beef, ham)
+    Capricciosa (tomato sauce, mozzarella, ham, mushrooms, artichokes, olives)
+  </p>
+
+  <p>
+    We prepare our pizzas using fresh, eco-friendly ingredients.
+    During the season, we cook our tomato sauce ourselves using a family recipe.
+    We truly value our loyal customers.
+  </p>
+</section>
+    
+
+<section class="menu"></section>   
+    
+
+</main>
+
+<footer>
+  Our pizzeria opened on Valentine's Day 2026.
+  We share all important events and daily moments on Instagram.
+  Follow us and stay connected!<br/>
+
+ <a href="https://www.instagram.com/your_username" target="_blank" style="display:inline-block; margin-top:8px;">
+ <img src="instagram-logo.png" alt="Instagram" style="width:24px; height:24px; vertical-align:middle;">
+ </a>
+ <br><br>
+  <strong>This website template includes:</strong><br>
+  
+ ✔ Mobile responsive design<br>
+  ✔ Online ordering system<br>
+  ✔ Telegram bot integration (orders + reviews)<br>
+  ✔ Ready-to-use GitHub hosting<br> 
+ <a href="https://docs.google.com/spreadsheets/d/1PAi1zXz-S8jXxkUJHSeR22rrm6eyjjIkks_kyZ0vSgY/edit" 
+   id="adminLink" target="_blank" style="color:#8b004b; font-weight:bold;">⚙ admin</a>
+</footer>
+ 
+<script>
+/* ===== ORDER SYSTEM ===== */
+
+let orderType = '';
+
+const menuSection = document.querySelector('.menu');
+const startBtn = document.querySelector('.start-btn');
+const checkboxes = document.querySelectorAll('.options input[type="checkbox"]');
+
+startBtn.addEventListener('click', () => {
+
+  if (checkboxes[0].checked) {
+    window.location.href = "https://www.ubereats.com";
+    return;
+  }
+
+  orderType = '';
+
+  if (checkboxes[1].checked) orderType = 'Takeaway';
+  if (checkboxes[2].checked) orderType = 'Dine-in';
+
+  if (!orderType) {
+    alert('Please select order type');
+    return;
+  }
+
+  menuSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+
+/* ===== SEND ORDER TO TELEGRAM ===== */
+
+function sendOrder(name, price) {
+
+  const message =
+`🛒 New Order
+Type: ${orderType}
+Item: ${name}
+Price: €${price}
+Time: ${new Date().toLocaleString()}`;
+
+  fetch("https://my-worker.andreyodr33.workers.dev", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      text: message
+    })
+  })
+  .then(() => alert("Order sent successfully!"))
+  .catch(() => alert("Error sending order"));
+}
+
+</script>
+<script>
+/* ===== REVIEW MODAL ===== */
+
+function openReviewForm() {
+  document.getElementById('review-modal').style.display = 'block';
+}
+
+function closeReviewForm() {
+  document.getElementById('review-modal').style.display = 'none';
+}
+
+/* ===== SAVE REVIEW ===== */
+
+function saveReview() {
+
+  const name = document.getElementById('name').value.trim();
+  const text = document.getElementById('text').value.trim();
+
+  if (!name || !text) {
+    alert('Please fill in both fields');
+    return;
+  }
+
+  const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+  reviews.unshift({ name, text });
+
+  localStorage.setItem('reviews', JSON.stringify(reviews.slice(0, 3)));
+
+  renderReviews();
+  closeReviewForm();
+
+  /* SEND REVIEW TO TELEGRAM */
+
+  const reviewMessage =
+`📝 New Review
+Name: ${name}
+Review: ${text}
+Time: ${new Date().toLocaleString()}`;
+
+  fetch("https://my-worker.andreyodr33.workers.dev", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      text: reviewMessage
+    })
+  });
+}
+
+/* ===== RENDER REVIEWS ===== */
+
+function renderReviews() {
+
+  const reviewsList = document.getElementById('reviews-list');
+  const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+  reviewsList.innerHTML = '';
+
+  reviews.forEach(r => {
+    const div = document.createElement('div');
+    div.innerHTML = `<strong>${r.name}</strong><p>${r.text}</p>`;
+    reviewsList.appendChild(div);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  renderReviews();
+});
+
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Pizza Party",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Main Street 12",
+    "addressLocality": "Dublin",
+    "addressCountry": "IE"
+  },
+  "telephone": "+353000000000"
+}
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const menuContainer = document.querySelector('.menu');
+  if (!menuContainer) return;
+
+  fetch('https://opensheet.elk.sh/1PAi1zXz-S8jXxkUJHSeR22rrm6eyjjIkks_kyZ0vSgY/PizzaMenu')
+    .then(res => res.json())
+    .then(menu => {
+
+      menuContainer.innerHTML = '';
+
+      menu.forEach(dish => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${dish.img}" alt="${dish.name}">
+          <h3>${dish.name}</h3>
+          <p>€${dish.price}</p>
+          <button onclick="sendOrder('${dish.name}', '${dish.price}')">
+            Заказать
+          </button>
+        `;
+        menuContainer.appendChild(card);
+      });
+
+    })
+    .catch(err => console.error('Ошибка загрузки:', err));
+
+});
+</script>
+
+<script>
+
+<!-- Access protection for Google Sheets -->
+
+document.getElementById('adminLink').addEventListener('click', function(e){
+  e.preventDefault();
+
+  const pass = prompt("Enter password:");
+
+  if(pass === "12345"){ // Correct password
+   
+    window.location.href = this.href; // или this.click() via setTimeout
+  } else {
+    alert("Incorrect password!");
+  }
+});
+  
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
