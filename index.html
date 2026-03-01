@@ -93,8 +93,8 @@ h1, h2 {
 /* ===== SIMPLE PRICING ===== */
 
 .simple-pricing {
-  max-height: 520px;     /* фиксированная высота */
-  overflow: hidden;      /* внешний блок не растёт */
+  max-height: none;     /* фиксированная высота */
+  overflow: visible;      /* внешний блок не растёт */
   display: flex;
   flex-direction: column;
 }
@@ -221,6 +221,7 @@ footer {
 @media (max-width: 900px) {
   .features-pricing {
     flex-direction: column;
+    gap: 20px;
   }
 
   .pricing-grid {
@@ -458,5 +459,6 @@ renderPortfolio();
 </body>
 
 </html
+
 
 
