@@ -326,9 +326,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const questions = [
   "What's your name (How should I address you?)",
-  "What type of website do you need? (Cafe/Pizzeria/Burger/Business Card/Other) ",
-  "What's your email? I work online and deliver digitally",
-  "Ready to reserve your spot with just a 30% deposit"
+  "{name},What type of website do you need? (Cafe/Pizzeria/Burger/Business Card/Other) ",
+  "{name},What's your email? I work online and deliver digitally",
+  "{name},Ready to reserve your spot with just a 30% deposit"
 ];
 
 let step = 0;
@@ -337,9 +337,14 @@ let answers = [];
 const chat = document.getElementById("chat");
 const input = document.getElementById("userInput");
 const nextBtn = document.getElementById("nextBtn");
+ function showQuestion() {
+  let questionText = questions[step];
 
-function showQuestion() {
-  chat.innerHTML += "<div><strong>" + questions[step] + "</strong></div>";
+  if (answers.length > 0) {
+    questionText = questionText.replace("{name}", answers[0]);
+ }
+
+  chat.innerHTML += `<div class="bot"><strong>${questionText}</strong></div>`;
 }
 
 async function nextStep() {
