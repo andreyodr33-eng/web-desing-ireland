@@ -209,15 +209,24 @@
 
         return result;
       }
+   function speak(text){
+    const utterance = new SpeechSynthesisUtterance(text);
 
-      function speak(text) {
-        const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
 
-        utterance.lang = "en-US";
-        utterance.rate = 0.9;
+    const voices = speechSynthesis.getVoices();
 
-        speechSynthesis.speak(utterance);
-      }
+    const voice = voices.find(v =>
+        v.lang.startsWith("en")
+    );
+
+    if(voice){
+        utterance.voice = voice;
+    }
+
+    speechSynthesis.speak(utterance);
+}
+      
 
       function startRound() {
         document.getElementById("message").textContent = "";
