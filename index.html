@@ -147,29 +147,125 @@
 
     <script>
       const WORDS = [
-        { id: 1, ru: "кот", en: "cat" },
-        { id: 2, ru: "собака", en: "dog" },
-        { id: 3, ru: "дом", en: "house" },
-        { id: 4, ru: "яблоко", en: "apple" },
-        { id: 5, ru: "книга", en: "book" },
-        { id: 6, ru: "вода", en: "water" },
-        { id: 7, ru: "солнце", en: "sun" },
-        { id: 8, ru: "машина", en: "car" },
-        { id: 9, ru: "дерево", en: "tree" },
-        { id: 10, ru: "море", en: "sea" },
-        { id: 11, ru: "доброе утро", en: "good morning" },
-        { id: 12, ru: "спасибо", en: "thank you" },
-        { id: 13, ru: "до свидания", en: "goodbye" },
-        { id: 14, ru: "как дела", en: "how are you" },
-        { id: 15, ru: "сколько это будет стоить", en: "how much is it" },
-        { id: 16, ru: "осень", en: "fall" },
-        { id: 17, ru: "почему", en: "why" },
-        { id: 18, ru: "отвечать", en: "answer" },
-        { id: 19, ru: "просить", en: "ask" },
-        { id: 20, ru: "покупать", en: "buy" },
-        { id: 21, ru: "закрывать", en: "close" },
-        { id: 22, ru: "пока", en: "bye" },
-      ];
+ { id: 1, ru: "кот", en: "cat" },
+ { id: 2, ru: "собака", en: "dog" },
+ { id: 3, ru: "дом", en: "house" },
+ { id: 4, ru: "яблоко", en: "apple" },
+ { id: 5, ru: "книга", en: "book" },
+ { id: 6, ru: "вода", en: "water" },
+ { id: 7, ru: "солнце", en: "sun" },
+ { id: 8, ru: "машина", en: "car" },
+ { id: 9, ru: "дерево", en: "tree" },
+ { id: 10, ru: "море", en: "sea" },
+ { id: 11, ru: "доброе утро", en: "good morning" },
+ { id: 12, ru: "спасибо", en: "thank you" },
+ { id: 13, ru: "до свидания", en: "goodbye" },
+ { id: 14, ru: "как дела", en: "how are you" },
+ { id: 15, ru: "сколько это будет стоить", en: "how much is it" },
+ { id: 16, ru: "осень", en: "fall" },
+ { id: 17, ru: "почему", en: "why" },
+ { id: 18, ru: "отвечать", en: "answer" },
+ { id: 19, ru: "просить", en: "ask" },
+ { id: 20, ru: "покупать", en: "buy" },
+ { id: 21, ru: "закрывать", en: "close" },
+ { id: 22, ru: "пока", en: "bye" },
+ { id: 23, ru:"приезжать", en:"arrive"},
+ { id: 24, ru:"быть",en:"be"},
+ { id: 25, ru:"покупать",en:"buy"},
+ { id: 26, ru:"закрывать",en:"close"},
+ { id: 27, ru:"могу",en:"can"},
+
+
+{ id: 28, ru:"звонить",en:"call"},
+{ id: 29, ru:"готовить",en:"cook"},
+{ id: 30, ru:"приходить",en:"come"},
+{ id: 31, ru:"выселиться",en:"check out"},
+{ id: 32, ru:"чистый",en:"clean"},
+
+{ id: 33, ru:"танцевать",en:"dance"},
+{ id: 34, ru:"пить",en:"drink"},
+{ id: 35, ru:"водить",en:"drive"},
+{ id: 36, ru:"делать",en:"do"},
+
+{ id: 37, ru:"есть",en:"eat"},
+
+{ id: 38, ru:"закончить",en:"finish"},
+{ id: 39, ru:"находить",en:"find"},
+{ id: 40, ru:"чувствовать",en:"feel"},
+
+{ id: 41, ru:"идти",en:"go"},
+{ id: 42, ru:"давать",en:"give"},
+{ id: 43, ru:"получать",en:"get"},
+
+{ id: 44, ru:"иметь",en:"have"},
+{ id: 45, ru:"помогать",en:"help"},
+{ id: 46, ru:"cлышать",en:"hear"},
+{ id: 47, ru:"ненавидеть",en:"hate"},
+
+{ id: 48, ru:"знать",en:"know"},
+
+{ id: 49, ru:"нравится",en:"like"},
+{ id: 50 ,ru:"жить",en:"live"},
+{ id: 51, ru:"слушать",en:"listen"},
+{ id: 52, ru:"любить",en:"love"},
+{ id: 53, ru:"смотреть",en:"look"},
+{ id: 54, ru:"учиться",en:"learn"},
+{ id: 55, ru:"жить", en:"live"},
+{ id: 56, ru:"оставлять", en:"leave"},
+
+{ id: 57, ru:"должен",en:"must"},
+{ id: 58, ru:"делать",en:"make"},
+{ id: 59, ru:"встретиться",en:"meet"},
+
+{ id: 60, ru:"нужен",en:"need"},
+
+{ id: 61,ru:"открывать",en:"open"},
+
+{ id: 62, ru:"ложить",en:"put"},
+{ id: 63, ru:"играть",en:"play"},
+
+{ id:64, ru:"читать",en:"read"},
+{ id:65, ru:"бегать",en:"run"},
+{ id:66, ru:"ехать",en:"ride"},
+{ id:67, ru:"отвечать",en:"reply"},
+
+
+{ id: 65, ru:"видеть",en:"see"},
+{ id: 66, ru:"спать",en:"sleep"},
+{ id: 67, ru:"продавать",en:"sell"},
+{ id: 68, ru:"учить",en:"study"},
+{ id: 69, ru:"сидеть",en:"sit"},
+{ id: 70, ru:"плавать",en:"swim"},
+{ id: 71, ru:"петь",en:"sing"},
+{ id: 72, ru:"тушить",en:"stew"},
+{ id: 73, ru:"начинать",en:"start"},
+{ id: 74, ru:"говорить",en:"speak"},
+{ id: 75, ru:"говорю",en:"say"},
+{ id: 76, ru:"стоять",en:"stand"},
+{ id: 77, ru:"остаться",en:"stay"},
+{ id: 78, ru:"останавливаться",en:"stop"},
+
+
+{ id: 79 ,ru:"брать",en:"take"},
+{ id: 80 ,ru:"пополнить",en:"top up"},
+{ id: 81 , ru:"пытаться",en:"try"},
+{ id: 82 ,ru:"повернуть",en:"turn"},
+{ id: 83 ,ru:"рассказывать",en:"tell"},
+{ id: 84 ,ru:"путешествовать",en:"travel"},
+{ id: 85 ,ru:"думать",en:"think"},
+
+{ id: 86, ru:"использовать", en:"use"},
+{ id: 87 ,ru:"понимаю",en:"understand"},
+
+{ id: 88 ,ru:"навещать",en:"visit"},
+
+{ id: 89 ,ru:"хотеть", en:"want"},
+{ id: 90 ,ru:"работать", en:"work"},
+{ id: 91 ,ru:"смотреть", en:"watch"},
+{ id: 92 , ru:"хотел бы", en:"would like"},
+{ id: 93 ,ru:"ходить", en:"walk"},
+{ id: 94 ,ru:"писать", en:"write"},
+];
 
       const WORDS_PER_ROUND = 5;
 
