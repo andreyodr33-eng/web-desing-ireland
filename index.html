@@ -424,6 +424,13 @@
       createCycle();
       startRound();
     </script>
+    <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/web-desing-ireland/service-worker.js")
+    .then(() => console.log("Service Worker registered"));
+}
+</script>
+      
   </head>
  </body>
 </html>
