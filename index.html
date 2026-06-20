@@ -214,13 +214,14 @@
 
     const voices = speechSynthesis.getVoices();
 
-    const voice = voices.find(v =>
-        v.lang.startsWith("en")
+     const englishVoice = voices.find(v =>
+        v.lang.includes("en")
     );
 
-    if(voice){
-        utterance.voice = voice;
+    if(englishVoice){
+        utterance.voice = englishVoice;
     }
+
 
     speechSynthesis.speak(utterance);
 }
