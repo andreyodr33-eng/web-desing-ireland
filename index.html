@@ -108,7 +108,8 @@
         font-size: 14px;
         padding: 6px 10px;
         border: none;
-        border-radius: 8px;
+        border:2px solid #2196F3;
+        border-radius: 50%;
         cursor: pointer;
       }
       .column::-webkit-scrollbar {
@@ -120,21 +121,20 @@
           border-radius: 10px;
       }
 
-      
-
-     .game {
+    .game {
         display:grid;
         grid-template-columns: 1fr 1fr;
         gap:10px;
     }
-
-
-    </style>
+ </style>
+    
    <body>
+     
     <div class="top">
       <button id="modeBtn">👂</button>
       <div class="stats">
-        Цикл: <span id="cycle">1</span> | Изучено: <span id="progress">0</span>
+        Цикл: <span id="cycle">1</span> |
+        Изучено: <span id="progress">0</span>
       
     <div class="message" id="message"></div> 
     </div>
