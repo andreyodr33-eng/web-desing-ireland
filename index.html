@@ -105,7 +105,14 @@
         
       }
       
-    
+      #modeBtn {
+        font-size: 14px;
+        padding: 6px 10px;
+        border: none;
+        border:2px solid #2196F3;
+        border-radius: 50%;
+        cursor: pointer;
+      }
       .column::-webkit-scrollbar {
          width: 6px;
       }
@@ -144,13 +151,14 @@
    <body>
      
     <div class="top">
-        <div class="top-button">
-        <button id="modeBtn">👂</button>
-        </div>    
+        
+      
+            
       <div class="stats">
+          
         Цикл: <span id="cycle">1</span> |
         Изучено: <span id="progress">0</span>
-      
+       <button id="modeBtn">👂</button>
     <div class="message" id="message"></div> 
     </div>
 
